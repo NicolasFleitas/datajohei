@@ -67,3 +67,7 @@ Cada transformación queda registrada y es reproducible: el historial permite de
 - Límite de carga: 100 MB por archivo.
 - Puerto por defecto: 8501.
 - Sin variables de entorno requeridas para uso local.
+
+## Contribuir
+
+Hacé un fork, creá una rama descriptiva desde `main` y abrí un PR hacia `main` con una descripción corta y cómo probarlo. Para errores o ideas, abrí un issue con pasos para reproducirlo y tu entorno. Guía completa en [CONTRIBUTING.md](CONTRIBUTING.md).
