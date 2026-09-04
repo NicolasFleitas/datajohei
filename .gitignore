@@ -1,0 +1,26 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+.pytest_cache/
+
+# Virtual environments
+.venv
+
+# Secrets and environment files
+.env
+*.env
+.streamlit/secrets.toml
+
+# Cryptographic keys and certificates
+*.pem
+*.key
+
+# Local data files and dataset dumps
+*.csv
+*.parquet
+*.xlsx
+*.pkl

@@ -1,0 +1,68 @@
+[project]
+name = "datajohei"
+version = "0.1.0"
+description = "Visualizador interactivo de limpieza y exploración de datos con Streamlit"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "matplotlib>=3.11.1",
+    "numpy>=2.5.2",
+    "openpyxl>=3.1.5",
+    "pandas>=3.0.5",
+    "pyarrow>=25.0.1",
+    "scipy>=1.18.0",
+    "seaborn>=0.13.2",
+    "streamlit>=1.59.1",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "ruff>=0.16",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+select = [
+    "E",      # pycodestyle errors
+    "W",      # pycodestyle warnings
+    "F",      # pyflakes
+    "I",      # isort
+    "UP",     # pyupgrade
+    "B",      # flake8-bugbear
+    "SIM",    # flake8-simplify
+    "G",      # flake8-logging-format
+    "RUF",    # ruff-specific rules
+    "PIE",    # flake8-pie
+    "PL",     # pylint
+]
+ignore = [
+    "E501",    # line too long (handled by formatter)
+    "RUF001",  # ambiguous unicode character (used in UI copy)
+    "PLR2004", # magic-value-comparison
+    "PLR0913", # too-many-arguments
+    "PLR0912", # too-many-branches
+    "PLR0915", # too-many-statements
+    "PLR0911", # too-many-return-statements
+]
+
+[tool.ruff.lint.per-file-ignores]
+"main.py" = [
+    "PLC0415", # import outside top-level (deferred until sys.path is configured)
+]
+"tests/*" = [
+    "S101",    # assert
+    "S102",    # exec
+    "PLR2004", # magic values in assertions
+    "PLC0415", # import outside top-level in test cases / contract tests
+    "PLW1510", # subprocess-run-without-check in test runner
+    "RUF059",  # unused unpacked variables in test cases
+]
+

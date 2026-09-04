@@ -1,0 +1,20 @@
+# Keep the build context minimal: only runtime artifacts belong in the image.
+.git
+.gitignore
+.github
+.agents
+.atl
+.codegraph
+.pytest_cache
+.ruff_cache
+.venv
+__pycache__
+**/__pycache__
+*.pyc
+docs/
+tests/
+tasks.md
+requirements.txt
+Dockerfile
+docker-compose.yml
+.dockerignore
