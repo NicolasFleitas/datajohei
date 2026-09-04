@@ -2,6 +2,8 @@
 
 Visualizador interactivo de limpieza y exploración de datos. Cargás un dataset, diagnosticás su calidad, aplicás transformaciones y exportás el resultado junto con el código Python reproducible.
 
+🟢 Probá la app en vivo: [datajohei.streamlit.app](https://datajohei.streamlit.app/)
+
 ## Requisitos
 
 - Python 3.12+
